@@ -63,4 +63,64 @@ Rfuncs.scalarLogarithm = (base) => {
     }
 }
 
+Rfuncs.sine = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return Math.sin(inp(val));
+        }
+    } else {
+        return Math.sin(inp);
+    }
+}
+
+Rfuncs.cosine = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return Math.cos(inp(val));
+        }
+    } else {
+        return Math.cos(inp);
+    }
+}
+
+Rfuncs.tangent = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return Math.tan(inp(val));
+        }
+    } else {
+        return Math.tan(inp);
+    }
+}
+
+Rfuncs.arcsine = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return Math.asin(inp(val));
+        }
+    } else {
+        return Math.asin(inp);
+    }
+}
+
+Rfuncs.arccosine = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return Math.acos(inp(val));
+        }
+    } else {
+        return Math.acos(inp);
+    }
+}
+
+Rfuncs.arctangent = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return Math.atan(inp(val));
+        }
+    } else {
+        return Math.atan(inp);
+    }
+}
+
 module.exports = Rfuncs;
