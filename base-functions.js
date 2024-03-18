@@ -1,5 +1,12 @@
 const Rfuncs = {};
 
+// This function returns a scalar no matter the input
+Rfuncs.constant = (scalar) => {
+    return (inp) => {
+        return scalar;
+    }
+}
+
 Rfuncs.scalarMultiply = (scalar) => {
     // return the function that scales an input by a scalar
     return function (inp) {

@@ -5,6 +5,8 @@ function compileFunc (funcObj) {
         return function (inp) {
             return inp;
         }
+    } else if (typeof funcObj === "function") {
+        return funcObj;
     } else if (funcObj.input === "INP") {
         if ('param' in funcObj) {
             return actionsObj[funcObj.action](funcObj.param);

@@ -1,9 +1,11 @@
 const compiler = require('./compiler');
 const functional = require('./functionals');
 
+function DIFF (func) {
+    return functional.differentiate(func);
+}
+
 const func1 = {input:"INP",action:"sine"};
-const func2 = {input:func1,action:"arcsine"};
 
-const compiled = compiler(func2);
+console.log(compiler(DIFF(DIFF(DIFF(func1))))(0.2));
 
-console.log(compiled(0.2));
