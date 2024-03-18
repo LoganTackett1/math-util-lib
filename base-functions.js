@@ -73,6 +73,16 @@ Rfuncs.sine = function (inp) {
     }
 }
 
+Rfuncs.cosecant = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return 1/Math.sin(inp(val));
+        }
+    } else {
+        return 1/Math.sin(inp);
+    }
+}
+
 Rfuncs.cosine = function (inp) {
     if (typeof inp === "function") {
         return (val) => {
@@ -83,6 +93,16 @@ Rfuncs.cosine = function (inp) {
     }
 }
 
+Rfuncs.secant = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return 1/Math.cos(inp(val));
+        }
+    } else {
+        return 1/Math.cos(inp);
+    }
+}
+
 Rfuncs.tangent = function (inp) {
     if (typeof inp === "function") {
         return (val) => {
@@ -90,6 +110,16 @@ Rfuncs.tangent = function (inp) {
         }
     } else {
         return Math.tan(inp);
+    }
+}
+
+Rfuncs.cotangent = function (inp) {
+    if (typeof inp === "function") {
+        return (val) => {
+            return 1/Math.tan(inp(val));
+        }
+    } else {
+        return 1/Math.tan(inp);
     }
 }
 

@@ -1,4 +1,5 @@
 const compiler = require('./compiler');
+const functional = require('./functionals');
 
 const func1 = {input:"INP",action:"sine"};
 const func2 = {input:func1,action:"arcsine"};
